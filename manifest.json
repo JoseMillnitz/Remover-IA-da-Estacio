@@ -1,0 +1,29 @@
+{
+	"manifest_version": 3,
+	"name": "Remover IA da Estácio",
+	"version": "1.0",
+	"description": "Remove a IA do site estudante.estacio.br",
+	"icons": {
+		"16": "icons/icon16.png",
+		"32": "icons/icon32.png",
+		"64": "icons/icon64.png",
+		"127": "icons/icon128.png"
+	},
+	"action": {
+		"default_icon": {
+			"16": "icons/icon16.png",
+			"32": "icons/icon32.png"
+		}
+	},
+	"permissions": [],
+	"host_permissions": [
+		"https://estudante.estacio.br/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["https://estudante.estacio.br/*"],
+			"js": ["content.js"],
+			"run_at": "document_idle"
+		}
+	]
+}
